@@ -1,0 +1,7 @@
+{
+    // Tell the CMake Tools extension which configure preset to use by default
+    "cmake.configurePreset": "x64-debug",
+    // Use the same kit that matches the preset (vs where CMake Tools chooses a kit separately)
+    "cmake.useCMakePresets": "always",
+    "cmake.configureOnOpen": false
+}

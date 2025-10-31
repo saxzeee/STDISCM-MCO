@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+2 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/embed.manifest"
