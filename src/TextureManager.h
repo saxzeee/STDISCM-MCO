@@ -1,6 +1,10 @@
 #pragma once
 #include <unordered_map>
 #include "SFML/Graphics.hpp"
+#include <mutex>
+#include <queue>
+#include <memory>
+#include <vector>
 
 class TextureManager
 {
@@ -8,6 +12,14 @@ public:
     typedef std::string String;
     typedef std::vector<sf::Texture*> TextureList;
     typedef std::unordered_map<String, TextureList> HashTable;
+    struct PendingImage {
+        String assetName;
+        std::string path; // normalized path
+    };
+    struct DecodedImage {
+        String assetName;
+        std::shared_ptr<sf::Image> image; // decoded pixels
+    };
     
 public:
     static TextureManager* getInstance();
@@ -18,6 +30,17 @@ public:
 
     sf::Texture* getStreamTextureFromList(const int index);
     int getNumLoadedStreamTextures() const;
+
+    // Thread-pool batching support
+    void scheduleStreamingScan(); // scans directory and queues filenames on a background thread
+    bool popPendingImage(PendingImage& out); // main thread pulls this and creates GPU textures
+    void pushPendingImage(PendingImage img); // worker pushes filename metadata (not used in new path)
+
+    // Decoded (CPU) image ready queue
+    void enumerateStreamingFiles(std::vector<std::string>& out) const;
+    void pushReadyImage(DecodedImage img);
+    bool popReadyImage(DecodedImage& out);
+    bool registerReadyImageToTexture(const DecodedImage& img); // create GPU texture & register
 
 private:
     TextureManager();
@@ -34,5 +57,13 @@ private:
 
     void countStreamingAssets();
     void instantiateAsTexture(String path, String assetName, bool isStreaming);
+    void instantiateFromImage(const String& assetName, const sf::Image& image, bool isStreaming);
 
+    // legacy pending filenames queue
+    mutable std::mutex m_pendingMutex;
+    std::queue<PendingImage> m_pendingImages;
+
+    // ready decoded images from worker threads
+    mutable std::mutex m_readyMutex;
+    std::queue<DecodedImage> m_readyImages;
 };

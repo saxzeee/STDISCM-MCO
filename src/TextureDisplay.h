@@ -1,7 +1,10 @@
 #pragma once
 #include "AGameObject.h"
+#include <queue>
+#include <memory>
 
 class IconObject;
+class ThreadPool;
 /// <summary>
 /// Class that deals with displaying of streamed textures
 /// </summary>
@@ -19,7 +22,7 @@ private:
 
 	enum StreamingType { BATCH_LOAD = 0, SINGLE_STREAM = 1 };
 	const float STREAMING_LOAD_DELAY = 4000.0f;
-	const StreamingType streamingType = SINGLE_STREAM;
+	const StreamingType streamingType = BATCH_LOAD;
 	float ticks = 0.0f;
 	bool startedStreaming = false;
 
@@ -27,6 +30,13 @@ private:
 	
 	const int MAX_COLUMN = 28;
 	const int MAX_ROW = 22;
+
+	// thread pool + scheduling
+	std::unique_ptr<ThreadPool> m_pool;
+	float schedulerTicksMs = 0.0f;
+	const float SCHEDULE_INTERVAL_MS = 20.0f; // short delay to build a sizeable ready queue
+	int maxIconsToShow = 50;
+	int promotedPerFrame = 4; // promote a small number each frame to avoid FPS drops
 
 	void spawnObject();
 };
