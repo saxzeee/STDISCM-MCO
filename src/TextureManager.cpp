@@ -44,9 +44,10 @@ bool TextureManager::loadSingleStreamAsset(int index)
         if(index == fileNum)
         {
             // simulate loading delay (optional): IETThread::sleep(50);
-
+            //<code here for thread sleeping. Fill this up only when instructor told so.>
             const auto& pathObj = entry.path();
             String path = pathObj.string();
+            //<code here for loading asset>
             // normalize separators to '/'
             for (auto& ch : path) { if (ch == '\\') ch = '/'; }
             String fileName = pathObj.filename().string();
@@ -133,7 +134,7 @@ void TextureManager::instantiateFromImage(const String& assetName, const sf::Ima
     if (isStreaming) this->streamTextureList.push_back(texture); else this->baseTextureList.push_back(texture);
 }
 
-// New: thread-pool batch support
+// thread-pool batch support
 void TextureManager::scheduleStreamingScan() {
     // Scan directory and push all file names into a pending queue
     for (const auto& entry : std::filesystem::directory_iterator(STREAMING_PATH)) {

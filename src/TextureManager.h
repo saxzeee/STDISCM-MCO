@@ -32,15 +32,15 @@ public:
     int getNumLoadedStreamTextures() const;
 
     // Thread-pool batching support
-    void scheduleStreamingScan(); // scans directory and queues filenames on a background thread
-    bool popPendingImage(PendingImage& out); // main thread pulls this and creates GPU textures
-    void pushPendingImage(PendingImage img); // worker pushes filename metadata (not used in new path)
+    void scheduleStreamingScan();
+    bool popPendingImage(PendingImage& out);
+    void pushPendingImage(PendingImage img);
 
     // Decoded (CPU) image ready queue
     void enumerateStreamingFiles(std::vector<std::string>& out) const;
     void pushReadyImage(DecodedImage img);
     bool popReadyImage(DecodedImage& out);
-    bool registerReadyImageToTexture(const DecodedImage& img); // create GPU texture & register
+    bool registerReadyImageToTexture(const DecodedImage& img);
 
 private:
     TextureManager();

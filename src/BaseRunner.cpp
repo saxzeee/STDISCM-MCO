@@ -41,7 +41,7 @@ void BaseRunner::run() {
             timeSinceLastUpdate -= TIME_PER_FRAME;
 
             processEvents();
-            // Fixed timestep update for stable behavior
+            //update(TIME_PER_FRAME);
             update(TIME_PER_FRAME);
         }
 
@@ -56,7 +56,6 @@ void BaseRunner::processEvents()
         switch (event.type) {
         case sf::Event::Resized:
         {
-            // Reset the view to match the new window size to avoid stretching
             sf::View view(sf::FloatRect(0.f, 0.f, static_cast<float>(event.size.width), static_cast<float>(event.size.height)));
             this->window.setView(view);
             GameObjectManager::getInstance()->processInput(event);

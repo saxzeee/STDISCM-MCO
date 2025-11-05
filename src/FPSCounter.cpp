@@ -31,7 +31,6 @@ void FPSCounter::initialize()
     this->statsText->setCharacterSize(35);
     this->statsText->setString("FPS: --.-");
 
-    // place bottom-right with small margin using origin anchoring
     const float margin = 10.0f;
     auto bounds = this->statsText->getLocalBounds();
     this->statsText->setOrigin(bounds.left + bounds.width, bounds.top + bounds.height);
@@ -45,7 +44,6 @@ void FPSCounter::processInput(sf::Event event)
 {
     if (event.type == sf::Event::Resized && this->statsText)
     {
-        // Re-anchor to bottom-right when window size changes
         const float margin = 10.0f;
         auto bounds = this->statsText->getLocalBounds();
         this->statsText->setOrigin(bounds.left + bounds.width, bounds.top + bounds.height);
@@ -71,7 +69,6 @@ void FPSCounter::updateFPS(sf::Time elapsedTime)
     updateTime += elapsedTime;
     framesPassed++;
 
-    // Update once per second for stable reading
     if (updateTime.asSeconds() >= 1.0f)
     {
         float fps = static_cast<float>(framesPassed) / updateTime.asSeconds();
@@ -83,7 +80,6 @@ void FPSCounter::updateFPS(sf::Time elapsedTime)
         // keep anchored to bottom-right as text width changes
         auto bounds = this->statsText->getLocalBounds();
         this->statsText->setOrigin(bounds.left + bounds.width, bounds.top + bounds.height);
-        // Do not change position here; it is set initially and updated on resize
 
         updateTime -= sf::seconds(1.0f);
         framesPassed = 0;

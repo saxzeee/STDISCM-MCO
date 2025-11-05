@@ -14,19 +14,18 @@ TextureDisplay::TextureDisplay(): AGameObject("TextureDisplay")
 
 void TextureDisplay::initialize()
 {
-	// create a small pool; 4 threads is plenty for IO/decode
 	m_pool = std::make_unique<ThreadPool>(4);
 
-	// Pre-enqueue CPU decode jobs so we build a sizeable ready queue
-	std::vector<std::string> files;
-	TextureManager::getInstance()->enumerateStreamingFiles(files);
-	for (const auto& path : files)
+	TextureManager::getInstance()->enumerateStreamingFiles(m_streamFiles);
+	m_nextFileIndex = 0;
+
+	std::size_t prewarm = std::min<std::size_t>(m_streamFiles.size(), m_batchPerTick * 2);
+	for (std::size_t i = 0; i < prewarm; ++i)
 	{
+		const auto path = m_streamFiles[i];
 		m_pool->enqueue([path]() {
-			// Decode image on worker thread
 			sf::Image img;
 			if (!img.loadFromFile(path)) return;
-			// Extract asset name (filename without extension)
 			auto fname = std::filesystem::path(path).filename().string();
 			auto pos = fname.find_last_of('.');
 			TextureManager::String assetName = (pos == std::string::npos) ? fname : fname.substr(0, pos);
@@ -35,6 +34,7 @@ void TextureDisplay::initialize()
 			TextureManager::getInstance()->pushReadyImage(std::move(di));
 		});
 	}
+	m_nextFileIndex = prewarm;
 }
 
 void TextureDisplay::processInput(sf::Event event)
@@ -57,24 +57,39 @@ void TextureDisplay::update(sf::Time deltaTime)
 		return;
 	}
 
+	// Fixed-time-step scheduling: enqueue decode tasks in small batches every SCHEDULE_INTERVAL_MS
+	schedulerTicksMs += BaseRunner::TIME_PER_FRAME.asMilliseconds();
+	if (schedulerTicksMs >= SCHEDULE_INTERVAL_MS)
+	{
+		std::size_t scheduled = 0;
+		while (scheduled < m_batchPerTick && m_nextFileIndex < m_streamFiles.size())
+		{
+			const auto path = m_streamFiles[m_nextFileIndex++];
+			m_pool->enqueue([path]() {
+				sf::Image img;
+				if (!img.loadFromFile(path)) return;
+				auto fname = std::filesystem::path(path).filename().string();
+				auto pos = fname.find_last_of('.');
+				TextureManager::String assetName = (pos == std::string::npos) ? fname : fname.substr(0, pos);
+				TextureManager::DecodedImage di{assetName, std::make_shared<sf::Image>(std::move(img))};
+				TextureManager::getInstance()->pushReadyImage(std::move(di));
+			});
+			scheduled++;
+		}
+		schedulerTicksMs = 0.0f;
+	}
+
 	// Promote a bounded number of decoded images to GPU textures per frame
 	int promoted = 0;
-	while (promoted < promotedPerFrame && (int)iconList.size() < maxIconsToShow)
+	while (promoted < promotedPerFrame)
 	{
 		TextureManager::DecodedImage di;
 		if (!TextureManager::getInstance()->popReadyImage(di)) break;
 		if (TextureManager::getInstance()->registerReadyImageToTexture(di))
 		{
-			// after registering, we can try to spawn an icon for the new texture
 			this->spawnObject();
 		}
 		promoted++;
-	}
-
-	// Ensure at least 50 icons appear (as textures become available)
-	while ((int)iconList.size() < std::min(maxIconsToShow, TextureManager::getInstance()->getNumLoadedStreamTextures()))
-	{
-		this->spawnObject();
 	}
 }
 
