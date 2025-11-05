@@ -2,6 +2,8 @@
 #include "AGameObject.h"
 #include <queue>
 #include <memory>
+#include <vector>
+#include <string>
 
 class IconObject;
 class ThreadPool;
@@ -21,7 +23,7 @@ private:
 	IconList iconList;
 
 	enum StreamingType { BATCH_LOAD = 0, SINGLE_STREAM = 1 };
-	const float STREAMING_LOAD_DELAY = 4000.0f;
+	const float STREAMING_LOAD_DELAY = 3000.0f;
 	const StreamingType streamingType = BATCH_LOAD;
 	float ticks = 0.0f;
 	bool startedStreaming = false;
@@ -31,12 +33,14 @@ private:
 	const int MAX_COLUMN = 28;
 	const int MAX_ROW = 22;
 
-	// thread pool + scheduling
+	// thread pool + fixed-interval scheduling
 	std::unique_ptr<ThreadPool> m_pool;
 	float schedulerTicksMs = 0.0f;
-	const float SCHEDULE_INTERVAL_MS = 20.0f; // short delay to build a sizeable ready queue
-	int maxIconsToShow = 50;
-	int promotedPerFrame = 4; // promote a small number each frame to avoid FPS drops
+	const float SCHEDULE_INTERVAL_MS = 400.0f; // change para sa speed ng batch loading
+	std::vector<std::string> m_streamFiles;
+	std::size_t m_nextFileIndex = 0;
+	std::size_t m_batchPerTick = 8;           // number of images to load per tick
+	int promotedPerFrame = 2; // promote a small number each frame to avoid FPS drops
 
 	void spawnObject();
 };
