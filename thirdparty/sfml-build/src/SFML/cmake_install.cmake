@@ -1,8 +1,8 @@
-# Install script for directory: C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-src/src/SFML
+# Install script for directory: C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-src/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Users/Phoebo/Source/Repos/STDISCM-PS2/out/install/x64-debug")
+  set(CMAKE_INSTALL_PREFIX "C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/out/install/x64-debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,12 +34,18 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/System/cmake_install.cmake")
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/Main/cmake_install.cmake")
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/Window/cmake_install.cmake")
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/Network/cmake_install.cmake")
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/Graphics/cmake_install.cmake")
-  include("C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-build/src/SFML/Audio/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/System/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Main/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Window/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Network/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Graphics/cmake_install.cmake")
+  include("C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/Audio/cmake_install.cmake")
 
 endif()
 
+string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
+if(CMAKE_INSTALL_LOCAL_ONLY)
+  file(WRITE "C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-build/src/SFML/install_local_manifest.txt"
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+endif()
