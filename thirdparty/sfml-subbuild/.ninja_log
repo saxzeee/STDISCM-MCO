@@ -2,36 +2,36 @@
 7	91	7852376599934722	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	888a6f8e391c9d54
 7	91	7852376599934722	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	888a6f8e391c9d54
 92	14006	7852376739080361	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	9a3d922751a31704
-16	2263	7852455509242945	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-2403	2468	7852455533687530	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
+19	2301	7852619920387422	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
+2505	2592	7852619946021738	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
 92	14006	7852376739080361	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	9a3d922751a31704
-16	2263	7852455509242945	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-2264	2336	7852455532364207	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-2264	2336	7852455532364207	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-2336	2402	7852455533031828	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-2336	2402	7852455533031828	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-2403	2468	7852455533687530	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-2468	2533	7852455534342485	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2597	2688	7852455535899366	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2468	2533	7852455534342485	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2597	2688	7852455535899366	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-2533	2597	7852455534977015	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2533	2597	7852455534977015	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2597	2688	7852455535899366	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2597	2688	7852455535899366	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-18	1874	7852463601244103	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-18	1874	7852463601244103	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-1875	1941	7852463620405848	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-1875	1941	7852463620405848	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-1941	2004	7852463621039169	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-1941	2004	7852463621039169	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-2004	2069	7852463621685841	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-2004	2069	7852463621685841	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-2069	2132	7852463622303969	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2069	2132	7852463622303969	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2132	2198	7852463622966213	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2132	2198	7852463622966213	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2198	2288	7852463623860007	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2198	2288	7852463623860007	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-2198	2288	7852463623860007	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2198	2288	7852463623860007	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
+19	2301	7852619920387422	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
+2302	2390	7852619943923831	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
+2302	2390	7852619943923831	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
+2390	2505	7852619944964460	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
+2390	2505	7852619944964460	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
+2505	2592	7852619946021738	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
+2592	2680	7852619946884859	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
+2771	2887	7852619948974634	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
+2592	2680	7852619946884859	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
+2771	2887	7852619948974634	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
+2680	2770	7852619947808999	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
+2680	2770	7852619947808999	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
+2771	2887	7852619948974634	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
+2771	2887	7852619948974634	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
+22	2060	7852631798034310	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
+22	2060	7852631798034310	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
+2061	2129	7852631819012199	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
+2061	2129	7852631819012199	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
+2129	2197	7852631819712255	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
+2129	2197	7852631819712255	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
+2198	2265	7852631820393676	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
+2198	2265	7852631820393676	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
+2265	2331	7852631821048673	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
+2265	2331	7852631821048673	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
+2332	2398	7852631821714283	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
+2332	2398	7852631821714283	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
+2399	2495	7852631822679005	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
+2399	2495	7852631822679005	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
+2399	2495	7852631822679005	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
+2399	2495	7852631822679005	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5

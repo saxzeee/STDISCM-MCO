@@ -43,8 +43,9 @@ bool TextureManager::loadSingleStreamAsset(int index)
     for (const auto& entry : std::filesystem::directory_iterator(STREAMING_PATH)) {
         if(index == fileNum)
         {
-            // simulate loading delay (optional): IETThread::sleep(50);
+            //IETThread::sleep(500);
             //<code here for thread sleeping. Fill this up only when instructor told so.>
+            std::this_thread::sleep_for(std::chrono::milliseconds(100));
             const auto& pathObj = entry.path();
             String path = pathObj.string();
             //<code here for loading asset>
