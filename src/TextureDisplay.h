@@ -43,6 +43,7 @@ private:
 	int promotedPerFrame = 2; // promote a small number each frame to avoid FPS drops
 	std::size_t assetCount = 0; // to load (loading screen)
 	std::size_t assetsReady = 0; // after loading in the bg
+	std::size_t imagesReady = 0; // for images since audio file is included
 	float spawnDelayMs = 50.0f;  // ms delay between each ic on spawn
 	float spawnTimerMs = 0.0f;
 	void spawnObject();

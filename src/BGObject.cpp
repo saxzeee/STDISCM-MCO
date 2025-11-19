@@ -13,12 +13,13 @@ void BGObject::initialize()
 
 	//assign texture
 	this->sprite = new sf::Sprite();
-	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Splash_3_0", 0);
+	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Splash_9_0", 0);
 	//texture->setRepeated(true);
 	this->sprite->setTexture(*texture);
 	sf::Vector2u textureSize = texture->getSize();
 	float scaleX = static_cast<float>(BaseRunner::WINDOW_WIDTH) / textureSize.x;
 	float scaleY = static_cast<float>(BaseRunner::WINDOW_HEIGHT) / textureSize.y;
+
 	this->sprite->setScale(scaleX, scaleY);
 	//make BG height x k to emulate repeating BG.
 	// this->sprite->setTextureRect(sf::IntRect(0,0,BaseRunner::WINDOW_WIDTH, BaseRunner::WINDOW_HEIGHT * 8)); 

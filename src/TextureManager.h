@@ -20,6 +20,10 @@ public:
         String assetName;
         std::shared_ptr<sf::Image> image; // decoded pixels
     };
+    struct AudioAsset {
+        String assetName;
+        String filePath;
+    };
     
 public:
     static TextureManager* getInstance();
@@ -41,6 +45,9 @@ public:
     void pushReadyImage(DecodedImage img);
     bool popReadyImage(DecodedImage& out);
     bool registerReadyImageToTexture(const DecodedImage& img);
+    // for audio
+    void markAudioAsReady(const String& assetName, const String& path);
+    bool popReadyAudio(AudioAsset& out);
 
 private:
     TextureManager();
@@ -66,4 +73,7 @@ private:
     // ready decoded images from worker threads
     mutable std::mutex m_readyMutex;
     std::queue<DecodedImage> m_readyImages;
+
+    std::queue<AudioAsset> m_readyAudio;
+    std::mutex m_audioMutex;
 };

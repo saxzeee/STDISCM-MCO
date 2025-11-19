@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <vector>
 
 using namespace std;
@@ -9,6 +10,7 @@ public:
 	static const int WINDOW_WIDTH = 1920;
 	static const int WINDOW_HEIGHT = 1080;
 	inline static bool isLoading = true;
+	inline static std::string musicFilePath = "";
 	sf::Time loadTime = sf::Time::Zero;
 	sf::Texture loadingTexture;
 	sf::Sprite loadingSprite;
@@ -22,6 +24,13 @@ private:
 	void render();
 	void processEvents();
 	void update(sf::Time elapsedTime);
+	sf::Music loadingMusic;  
+	sf::Music backgroundMusic;
+	bool musicStarted = false;
+	bool loadingMusicStarted = false;
+	bool isCrossfading = false;
+	float crossfadeTime = 0.0f;
+	const float CROSSFADE_DURATION = 1.5f;
 };
 
 
