@@ -9,19 +9,20 @@ public:
 	static const sf::Time	TIME_PER_FRAME;
 	static const int WINDOW_WIDTH = 1920;
 	static const int WINDOW_HEIGHT = 1080;
-	inline static bool isLoading = true; // true until all streaming assets promoted
+	inline static bool isLoading = true;
 	inline static std::string musicFilePath = "";
 
-	// Explicit background phase to avoid repeated fading
-	enum class BGPhase { Splash, FadingOut, Final }; // Splash_9_0 -> FadingOut -> Splash_1_0
+	enum class BGPhase { Splash, HoldAfterLoad, FadingOut, Final };
 	inline static BGPhase bgPhase = BGPhase::Splash;
 
-	inline static bool isFading = false;  // convenience flag used only during FadingOut
+	inline static bool isFading = false;
 	inline static float fadeAlpha = 255.0f; // 255 -> 0
 	float fadeElapsedMs = 0.0f;
 	const float FADE_DURATION_MS = 300.0f;
 
-	// Global asset progress counters (updated by TextureDisplay)
+	float postLoadHoldMs = 500.0f; // adjust for longer delay
+	float holdElapsedMs = 0.0f;
+
 	inline static std::size_t totalAssets = 0;
 	inline static std::size_t assetsLoaded = 0;
 

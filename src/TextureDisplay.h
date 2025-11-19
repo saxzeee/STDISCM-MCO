@@ -41,11 +41,15 @@ private:
 	std::size_t m_nextFileIndex = 0;
 	std::size_t m_batchPerTick = 10;           // number of images to load per tick
 	int promotedPerFrame = 2; // promote a small number each frame to avoid FPS drops
-	std::size_t assetCount = 0; // to load (loading screen)
-	std::size_t assetsReady = 0; // after loading in the bg
-	std::size_t imagesReady = 0; // for images since audio file is included
-	float spawnDelayMs = 50.0f;  // ms delay between each ic on spawn
+	std::size_t assetCount = 0; 
+	std::size_t assetsReady = 0;
+	std::size_t imagesReady = 0;
+	float spawnDelayMs = 10.0f;
 	float spawnTimerMs = 0.0f;
+
+	float postLoadIconDelayMs = 800.0f; // adjust for longer pause before icons appear
+	float postLoadIconTimerMs = 0.0f;
+	bool iconsSpawned = false;
 	void spawnObject();
 };
 

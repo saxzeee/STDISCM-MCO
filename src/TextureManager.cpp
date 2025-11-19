@@ -134,9 +134,7 @@ void TextureManager::instantiateFromImage(const String& assetName, const sf::Ima
     if (isStreaming) this->streamTextureList.push_back(texture); else this->baseTextureList.push_back(texture);
 }
 
-// thread-pool batch support
 void TextureManager::scheduleStreamingScan() {
-    // Scan directory and push all file names into a pending queue
     for (const auto& entry : std::filesystem::directory_iterator(STREAMING_PATH)) {
         const auto& pathObj = entry.path();
         String path = pathObj.string();
@@ -187,7 +185,6 @@ bool TextureManager::registerReadyImageToTexture(const DecodedImage& img) {
     instantiateFromImage(img.assetName, *img.image, true);
     return true;
 }
-// audio processing functions
 void TextureManager::markAudioAsReady(const String& assetName, const String& path) {
     std::lock_guard<std::mutex> lock(m_audioMutex);
     AudioAsset asset{ assetName, path };

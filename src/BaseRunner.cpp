@@ -53,9 +53,9 @@ void BaseRunner::configureProgressBarGeometry() {
     barInnerWidth = bounds.width - leftTrim - rightTrim;
     barInnerLeftOffset = leftTrim;
 
-    barInnerHeight = bounds.height * 0.20f;// change for progress bar height and position
+    barInnerHeight = bounds.height * 0.25f;// change for progress bar height and position
     float trackCenterY = bounds.height * 0.62f;
-    barInnerTopOffset = trackCenterY - (barInnerHeight * 0.0f);// change for progress bar height and position
+    barInnerTopOffset = trackCenterY - (barInnerHeight * 0.3f);// change for progress bar height and position
 
     progressFill.setPosition(bounds.left + barInnerLeftOffset, bounds.top + barInnerTopOffset);
     progressFill.setSize({0.f, barInnerHeight});
@@ -113,10 +113,18 @@ void BaseRunner::update(sf::Time elapsedTime) {
     updateProgressBar();
 
     if (bgPhase == BGPhase::Splash && !isLoading) {
-        bgPhase = BGPhase::FadingOut;
-        isFading = true;
-        fadeAlpha = 255.0f;
-        fadeElapsedMs = 0.0f;
+        bgPhase = BGPhase::HoldAfterLoad; // enter hold phase after loading finishes
+        holdElapsedMs = 0.0f;
+    }
+    =
+    if (bgPhase == BGPhase::HoldAfterLoad) {
+        holdElapsedMs += elapsedTime.asMilliseconds();
+        if (holdElapsedMs >= postLoadHoldMs) {
+            bgPhase = BGPhase::FadingOut;
+            isFading = true;
+            fadeAlpha = 255.0f;
+            fadeElapsedMs = 0.0f;
+        }
     }
 
     if (bgPhase == BGPhase::FadingOut) {
