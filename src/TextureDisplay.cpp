@@ -150,7 +150,7 @@ void TextureDisplay::spawnObject()
 	int IMG_WIDTH = 68; int IMG_HEIGHT = 68;
 	float x = this->columnGrid * IMG_WIDTH;
 	float y = this->rowGrid * IMG_HEIGHT;
-	iconObj->setPosition(x, y);
+	iconObj->setPosition(x+100, y+100);
 	iconObj->setScale(0.25f, 0.25f);
 
 	std::cout << "Set position: " << x << " " << y << std::endl;
