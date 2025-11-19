@@ -69,7 +69,7 @@ void FPSCounter::updateFPS(sf::Time elapsedTime)
     updateTime += elapsedTime;
     framesPassed++;
 
-    if (updateTime.asSeconds() >= 1.0f)
+    if (updateTime.asSeconds() >= 0.5f) // update every 0.5 seconds
     {
         float fps = static_cast<float>(framesPassed) / updateTime.asSeconds();
 
@@ -81,7 +81,7 @@ void FPSCounter::updateFPS(sf::Time elapsedTime)
         auto bounds = this->statsText->getLocalBounds();
         this->statsText->setOrigin(bounds.left + bounds.width, bounds.top + bounds.height);
 
-        updateTime -= sf::seconds(1.0f);
+        updateTime -= sf::seconds(0.5f);
         framesPassed = 0;
     }
 }
