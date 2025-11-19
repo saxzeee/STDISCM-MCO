@@ -116,7 +116,6 @@ void BaseRunner::update(sf::Time elapsedTime) {
         bgPhase = BGPhase::HoldAfterLoad; // enter hold phase after loading finishes
         holdElapsedMs = 0.0f;
     }
-    =
     if (bgPhase == BGPhase::HoldAfterLoad) {
         holdElapsedMs += elapsedTime.asMilliseconds();
         if (holdElapsedMs >= postLoadHoldMs) {
