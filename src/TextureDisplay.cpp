@@ -15,8 +15,8 @@ TextureDisplay::TextureDisplay(): AGameObject("TextureDisplay")
 void TextureDisplay::initialize()
 {
 	m_pool = std::make_unique<ThreadPool>(4);
-
 	TextureManager::getInstance()->enumerateStreamingFiles(m_streamFiles);
+	assetCount = m_streamFiles.size(); // get the amount of files to laod
 	m_nextFileIndex = 0;
 
 	std::size_t prewarm = std::min<std::size_t>(m_streamFiles.size(), m_batchPerTick * 2);
@@ -87,9 +87,22 @@ void TextureDisplay::update(sf::Time deltaTime)
 		if (!TextureManager::getInstance()->popReadyImage(di)) break;
 		if (TextureManager::getInstance()->registerReadyImageToTexture(di))
 		{
-			this->spawnObject();
+			assetsReady++; // add to the ready count, can use to track loading prog
+			std::cout << "[TextureDisplay] Promoted texture: " << di.assetName << " " 
+				<< "BaseRunner: " << BaseRunner::isLoading << " assetCount: " << assetCount << " assets ready: " << assetsReady << std::endl;
 		}
 		promoted++;
+	}
+	if (BaseRunner::isLoading&& assetsReady >= assetCount) {
+		BaseRunner::isLoading = false; // mark loading end
+	}
+	if (!BaseRunner::isLoading && iconList.size() < assetsReady) {
+		spawnTimerMs += BaseRunner::TIME_PER_FRAME.asMilliseconds();
+
+		if (spawnTimerMs >= spawnDelayMs) {
+			this->spawnObject();
+			spawnTimerMs = 0.0f;
+		}
 	}
 }
 

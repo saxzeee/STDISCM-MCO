@@ -1,1 +1,1 @@
-Media/Textures/Desert.png
+Media/Textures/Splash_3_0.png

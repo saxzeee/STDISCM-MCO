@@ -1,37 +1,37 @@
 # ninja log v6
-4	80	7836233338786494	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	888a6f8e391c9d54
-4	80	7836233338786494	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	888a6f8e391c9d54
-81	12997	7836233467984299	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	9a3d922751a31704
-12998	14834	7836233468052615	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-14958	15019	7836233488205148	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-81	12997	7836233467984299	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	9a3d922751a31704
-12998	14834	7836233468052615	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-14834	14897	7836233486979967	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-14834	14897	7836233486979967	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-14897	14958	7836233487590083	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-14897	14958	7836233487590083	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-14958	15019	7836233488205148	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-15020	15082	7836233488827584	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-15142	15225	7836233490266489	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-15020	15082	7836233488827584	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-15142	15225	7836233490266489	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-15082	15142	7836233489434004	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-15082	15142	7836233489434004	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-15142	15225	7836233490266489	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-15142	15225	7836233490266489	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-20	2266	7836306291418805	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-20	2266	7836306291418805	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	d29f5ce113bed136
-2267	2362	7836306314763873	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-2267	2362	7836306314763873	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	a7531eac74eba8a8
-2363	2434	7836306315473534	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-2363	2434	7836306315473534	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	72dd0012c163cc64
-2434	2503	7836306316173334	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-2434	2503	7836306316173334	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	1e296593d7eb44f5
-2504	2576	7836306316899576	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2504	2576	7836306316899576	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	9bc82c4934a1ec7e
-2577	2658	7836306317704370	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2577	2658	7836306317704370	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	5de66b414816437
-2658	2758	7836306318726081	CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2658	2758	7836306318726081	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
-2658	2758	7836306318726081	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	43a4322faca5dfc5
-2658	2758	7836306318726081	C:/Users/ejohn/Documents/Senior Year/First Term/STDISCM/P2-Batch_Asset_Loader/STDISCM-SFML-CMAKE/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	43a4322faca5dfc5
+8	127	7840266266531106	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	111ec3b4248d9d04
+12946	13445	7840283771223187	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	df519f0cc4462310
+8	127	7840266266531106	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-mkdir	111ec3b4248d9d04
+128	15583	7840266421036089	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	e42618eaf63efba4
+35	11673	7840283637559868	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	c2a6240d9e6f4b9b
+128	15583	7840266421036089	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-download	e42618eaf63efba4
+11674	12357	7840283760381297	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	1067303c31ebaa16
+35	11673	7840283637559868	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	c2a6240d9e6f4b9b
+11674	12357	7840283760381297	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	1067303c31ebaa16
+12358	12945	7840283766312331	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	32c5c60f2512f6bd
+13445	13922	7840283776099039	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	387d10ecb50be4ed
+12358	12945	7840283766312331	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	32c5c60f2512f6bd
+12946	13445	7840283771223187	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	df519f0cc4462310
+13445	13922	7840283776099039	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	387d10ecb50be4ed
+13922	14397	7840283780889883	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	cf3c73a1d4b1ba90
+13922	14397	7840283780889883	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	cf3c73a1d4b1ba90
+14398	15098	7840283787781072	CMakeFiles/sfml-populate-complete	17699c85534f0478
+14398	15098	7840283787781072	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	17699c85534f0478
+14398	15098	7840283787781072	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	17699c85534f0478
+14398	15098	7840283787781072	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	17699c85534f0478
+62	26373	7840284417750989	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	c2a6240d9e6f4b9b
+62	26373	7840284417750989	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-update	c2a6240d9e6f4b9b
+26375	27964	7840284695259408	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	1067303c31ebaa16
+26375	27964	7840284695259408	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-patch	1067303c31ebaa16
+27966	29750	7840284711602257	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	32c5c60f2512f6bd
+27966	29750	7840284711602257	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-configure	32c5c60f2512f6bd
+29751	31178	7840284726859921	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	df519f0cc4462310
+29751	31178	7840284726859921	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-build	df519f0cc4462310
+31178	32512	7840284740967379	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	387d10ecb50be4ed
+31178	32512	7840284740967379	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-install	387d10ecb50be4ed
+32514	33885	7840284755279878	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	cf3c73a1d4b1ba90
+32514	33885	7840284755279878	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-test	cf3c73a1d4b1ba90
+33886	35833	7840284774618257	CMakeFiles/sfml-populate-complete	17699c85534f0478
+33886	35833	7840284774618257	sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	17699c85534f0478
+33886	35833	7840284774618257	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/CMakeFiles/sfml-populate-complete	17699c85534f0478
+33886	35833	7840284774618257	C:/Users/Phoebo/source/repos/STDISCM-PS2/thirdparty/sfml-subbuild/sfml-populate-prefix/src/sfml-populate-stamp/sfml-populate-done	17699c85534f0478

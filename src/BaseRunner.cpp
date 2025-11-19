@@ -11,13 +11,20 @@
 const sf::Time BaseRunner::TIME_PER_FRAME = sf::seconds(1.f / 60.f);
 
 BaseRunner::BaseRunner() :
-    window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "HO: Entity Component", sf::Style::Default) {
+    //window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "HO: Entity Component", sf::Style::Default) {
+    window(sf::VideoMode(WINDOW_WIDTH, WINDOW_HEIGHT), "PS2: Interactive Loading Screen", sf::Style::Default) {
     // Cap the framerate to 60 FPS
     this->window.setFramerateLimit(60);
 
     //load initial textures
     TextureManager::getInstance()->loadFromAssetList();
-
+    //loading icon
+    loadingTexture.loadFromFile("Media/loading.png");
+    loadingSprite.setTexture(loadingTexture);
+    loadingSprite.setOrigin(loadingTexture.getSize().x / 2, loadingTexture.getSize().y / 2);
+    loadingSprite.setScale(0.3f, 0.3f);
+    loadingSprite.setPosition(WINDOW_WIDTH / 10, WINDOW_HEIGHT / 1.25);
+    
     //load objects
     BGObject* bgObject = new BGObject("BGObject");
     GameObjectManager::getInstance()->addObject(bgObject);
@@ -39,9 +46,7 @@ void BaseRunner::run() {
         while (timeSinceLastUpdate > TIME_PER_FRAME)
         {
             timeSinceLastUpdate -= TIME_PER_FRAME;
-
             processEvents();
-            //update(TIME_PER_FRAME);
             update(TIME_PER_FRAME);
         }
 
@@ -78,5 +83,9 @@ void BaseRunner::update(sf::Time elapsedTime) {
 void BaseRunner::render() {
     this->window.clear();
     GameObjectManager::getInstance()->draw(&this->window);
+    if (isLoading) {
+        loadingSprite.rotate(3);
+        this->window.draw(loadingSprite);
+    }
     this->window.display();
 }

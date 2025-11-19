@@ -13,13 +13,17 @@ void BGObject::initialize()
 
 	//assign texture
 	this->sprite = new sf::Sprite();
-	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Desert", 0);
-	texture->setRepeated(true);
+	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap("Splash_3_0", 0);
+	//texture->setRepeated(true);
 	this->sprite->setTexture(*texture);
-	sf::Vector2u textureSize = this->sprite->getTexture()->getSize();
+	sf::Vector2u textureSize = texture->getSize();
+	float scaleX = static_cast<float>(BaseRunner::WINDOW_WIDTH) / textureSize.x;
+	float scaleY = static_cast<float>(BaseRunner::WINDOW_HEIGHT) / textureSize.y;
+	this->sprite->setScale(scaleX, scaleY);
 	//make BG height x k to emulate repeating BG.
-	this->sprite->setTextureRect(sf::IntRect(0,0,BaseRunner::WINDOW_WIDTH, BaseRunner::WINDOW_HEIGHT * 8)); 
-	this->setPosition(0, -BaseRunner::WINDOW_HEIGHT * 7);
+	// this->sprite->setTextureRect(sf::IntRect(0,0,BaseRunner::WINDOW_WIDTH, BaseRunner::WINDOW_HEIGHT * 8)); 
+	//this->setPosition(0, -BaseRunner::WINDOW_HEIGHT * 7);
+	this->setPosition(0, 0);
 }
 
 void BGObject::processInput(sf::Event event)
@@ -29,16 +33,16 @@ void BGObject::processInput(sf::Event event)
 void BGObject::update(sf::Time deltaTime)
 {
 	//make BG scroll slowly
-	sf::Vector2f position = this->getPosition();
-	position.y += this->SPEED_MULTIPLIER * deltaTime.asSeconds();
-	this->setPosition(position.x, position.y);
+	//sf::Vector2f position = this->getPosition();
+	//position.y += this->SPEED_MULTIPLIER * deltaTime.asSeconds();
+	//this->setPosition(position.x, position.y);
 
-	sf::Vector2f localPos = this->sprite->getPosition();
-	if (localPos.y * deltaTime.asSeconds() > 0) {
-		//reset position
-		this->setPosition(0, -BaseRunner::WINDOW_HEIGHT * 7);
-	}
-	else {
-		
-	}
+	//sf::Vector2f localPos = this->sprite->getPosition();
+	//if (localPos.y * deltaTime.asSeconds() > 0) {
+	//	//reset position
+	//	this->setPosition(0, -BaseRunner::WINDOW_HEIGHT * 7);
+	//}
+	//else {
+	//	
+	//}
 }
