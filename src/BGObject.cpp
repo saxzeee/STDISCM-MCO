@@ -3,7 +3,7 @@
 #include "TextureManager.h"
 #include "BaseRunner.h"
 
-BGObject::BGObject(string name) : AGameObject(name) {}
+BGObject::BGObject(String name) : AGameObject(name) {}
 
 void BGObject::setBackgroundByName(const std::string& assetName) {
 	sf::Texture* texture = TextureManager::getInstance()->getFromTextureMap(assetName, 0);

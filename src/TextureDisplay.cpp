@@ -18,6 +18,7 @@ void TextureDisplay::initialize()
 	TextureManager::getInstance()->enumerateStreamingFiles(m_streamFiles);
 
 	assetCount = m_streamFiles.size(); // get the amount of files to laod
+	BaseRunner::totalAssets = assetCount; // register total for progress bar
 	m_nextFileIndex = 0;
 
 	std::size_t prewarm = std::min<std::size_t>(m_streamFiles.size(), m_batchPerTick * 2);
@@ -107,6 +108,7 @@ void TextureDisplay::update(sf::Time deltaTime)
 			{
 				assetsReady++;
 				imagesReady++;
+				BaseRunner::assetsLoaded = assetsReady; // update progress bar
 				std::cout << "[TextureDisplay] Promoted texture: " << di.assetName << " "
 					<< "assets ready: " << assetsReady << "/" << assetCount << std::endl;
 			}
@@ -118,6 +120,7 @@ void TextureDisplay::update(sf::Time deltaTime)
 		TextureManager::AudioAsset audio;
 		if (TextureManager::getInstance()->popReadyAudio(audio)) {
 			assetsReady++;
+			BaseRunner::assetsLoaded = assetsReady; // update progress bar
 			std::cout << "[TextureDisplay] Audio ready: " << audio.assetName << " "
 				<< "assets ready: " << assetsReady << "/" << assetCount << std::endl;
 

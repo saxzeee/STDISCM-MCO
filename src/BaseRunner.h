@@ -21,9 +21,21 @@ public:
 	float fadeElapsedMs = 0.0f;
 	const float FADE_DURATION_MS = 300.0f;
 
+	// Global asset progress counters (updated by TextureDisplay)
+	inline static std::size_t totalAssets = 0;
+	inline static std::size_t assetsLoaded = 0;
+
 	sf::Time loadTime = sf::Time::Zero;
 	sf::Texture loadingTexture;
 	sf::Sprite loadingSprite;
+
+	// Progress bar overlay geometry and fill
+	sf::RectangleShape progressFill;
+	float barInnerLeftOffset = 0.0f;
+	float barInnerTopOffset = 0.0f;
+	float barInnerWidth = 0.0f;
+	float barInnerHeight = 0.0f;
+
 	BaseRunner();
 	void run();
 
@@ -33,6 +45,10 @@ private:
 	void render();
 	void processEvents();
 	void update(sf::Time elapsedTime);
+	void configureProgressBarGeometry();
+	void updateProgressBar();
+	sf::Color progressColorFor(float t) const;
+
 	sf::Music loadingMusic;  
 	sf::Music backgroundMusic;
 	bool musicStarted = false;
