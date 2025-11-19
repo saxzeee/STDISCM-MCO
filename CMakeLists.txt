@@ -47,8 +47,9 @@ add_executable (STDISCM-SFML-CMAKE "${PROJ_SRC}" "STDISCM-SFML-CMAKE.cpp" "STDIS
 
 #Change Trarget C++ compile to ver 20
 target_compile_features(STDISCM-SFML-CMAKE PRIVATE cxx_std_20)
-#Link the SFML graphics lib
-target_link_libraries(STDISCM-SFML-CMAKE PRIVATE sfml-graphics)
+#Link the SFML graphics lib and audio
+# target_link_libraries(STDISCM-SFML-CMAKE PRIVATE sfml-graphics)
+target_link_libraries(STDISCM-SFML-CMAKE PRIVATE sfml-graphics sfml-audio)
 
 add_custom_command(
     TARGET STDISCM-SFML-CMAKE POST_BUILD

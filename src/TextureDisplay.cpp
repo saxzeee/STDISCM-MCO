@@ -15,8 +15,9 @@ TextureDisplay::TextureDisplay(): AGameObject("TextureDisplay")
 void TextureDisplay::initialize()
 {
 	m_pool = std::make_unique<ThreadPool>(4);
-
 	TextureManager::getInstance()->enumerateStreamingFiles(m_streamFiles);
+
+	assetCount = m_streamFiles.size(); // get the amount of files to laod
 	m_nextFileIndex = 0;
 
 	std::size_t prewarm = std::min<std::size_t>(m_streamFiles.size(), m_batchPerTick * 2);
@@ -24,6 +25,14 @@ void TextureDisplay::initialize()
 	{
 		const auto path = m_streamFiles[i];
 		m_pool->enqueue([path]() {
+			// Handle mp3 files that will be loaded
+			if (path.find(".mp3") != std::string::npos) {
+				auto fname = std::filesystem::path(path).filename().string();
+				auto pos = fname.find_last_of('.');
+				TextureManager::String assetName = (pos == std::string::npos) ? fname : fname.substr(0, pos);
+				TextureManager::getInstance()->markAudioAsReady(assetName, path);
+				return;
+			}
 			sf::Image img;
 			if (!img.loadFromFile(path)) return;
 			auto fname = std::filesystem::path(path).filename().string();
@@ -66,6 +75,14 @@ void TextureDisplay::update(sf::Time deltaTime)
 		{
 			const auto path = m_streamFiles[m_nextFileIndex++];
 			m_pool->enqueue([path]() {
+				// check for audio file
+				if (path.find(".mp3") != std::string::npos) {
+					auto fname = std::filesystem::path(path).filename().string();
+					auto pos = fname.find_last_of('.');
+					TextureManager::String assetName = (pos == std::string::npos) ? fname : fname.substr(0, pos);
+					TextureManager::getInstance()->markAudioAsReady(assetName, path);
+					return;
+				}
 				sf::Image img;
 				if (!img.loadFromFile(path)) return;
 				auto fname = std::filesystem::path(path).filename().string();
@@ -83,13 +100,45 @@ void TextureDisplay::update(sf::Time deltaTime)
 	int promoted = 0;
 	while (promoted < promotedPerFrame)
 	{
+		// pop image
 		TextureManager::DecodedImage di;
-		if (!TextureManager::getInstance()->popReadyImage(di)) break;
-		if (TextureManager::getInstance()->registerReadyImageToTexture(di))
-		{
-			this->spawnObject();
+		if (TextureManager::getInstance()->popReadyImage(di)) {
+			if (TextureManager::getInstance()->registerReadyImageToTexture(di))
+			{
+				assetsReady++;
+				imagesReady++;
+				std::cout << "[TextureDisplay] Promoted texture: " << di.assetName << " "
+					<< "assets ready: " << assetsReady << "/" << assetCount << std::endl;
+			}
+			promoted++;
+			continue;
 		}
-		promoted++;
+
+		// pop audio
+		TextureManager::AudioAsset audio;
+		if (TextureManager::getInstance()->popReadyAudio(audio)) {
+			assetsReady++;
+			std::cout << "[TextureDisplay] Audio ready: " << audio.assetName << " "
+				<< "assets ready: " << assetsReady << "/" << assetCount << std::endl;
+
+			// save the bg music path read from streaming folder
+			BaseRunner::musicFilePath = audio.filePath;
+			promoted++;
+			continue;
+		}
+
+		break;
+	}
+	if (BaseRunner::isLoading&& assetsReady >= assetCount) {
+		BaseRunner::isLoading = false; // mark loading end
+	}
+	if (!BaseRunner::isLoading && iconList.size() < imagesReady) {
+		spawnTimerMs += BaseRunner::TIME_PER_FRAME.asMilliseconds();
+
+		if (spawnTimerMs >= spawnDelayMs) {
+			this->spawnObject();
+			spawnTimerMs = 0.0f;
+		}
 	}
 }
 

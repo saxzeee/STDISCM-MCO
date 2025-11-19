@@ -187,3 +187,17 @@ bool TextureManager::registerReadyImageToTexture(const DecodedImage& img) {
     instantiateFromImage(img.assetName, *img.image, true);
     return true;
 }
+// audio processing functions
+void TextureManager::markAudioAsReady(const String& assetName, const String& path) {
+    std::lock_guard<std::mutex> lock(m_audioMutex);
+    AudioAsset asset{ assetName, path };
+    m_readyAudio.emplace(std::move(asset));
+}
+
+bool TextureManager::popReadyAudio(AudioAsset& out) {
+    std::lock_guard<std::mutex> lock(m_audioMutex);
+    if (m_readyAudio.empty()) return false;
+    out = std::move(m_readyAudio.front());
+    m_readyAudio.pop();
+    return true;
+}
